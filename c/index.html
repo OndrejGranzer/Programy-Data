@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ovladače, firmware a utility</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .topnav a.active {
+  background-color: #222;
+  border-bottom: 2px solid #c5c5c5;
+  color: white;
+  font-weight: 650;        
+  padding: 19px 25px;
+  text-transform: uppercase; 
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 21px 25px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+    text-align:center;
+  background-color: #ddd;
+  padding: 10px;
+     line-height: 2;   
+    font-size: 18px;   
+  flex: 1;
+}
+
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 1px 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="../index.html">Úvod</a>
+  <a href="../a/index.html">Programové a datové soubory</a>
+  <a href="../b/index.html">Operační systémy</a>
+  <a href="../c/index.html"class="active">Ovladače, firmware a utility</a>
+  <a href="../d/index.html">Aplikační software</a>
+  <a href="../e/index.html">Instalace programů</a>
+  <a href="../f/index.html">Softwarové licence</a>
+  <a href="../g/index.html">Software a autorský zákon</a>
+  <a href="../h/index.html">Emulace a virtualizace</a>
+</div>
+
+<div class="content">
+  <h1>Ovladače, firmware a utility</h1>
+  <p>K <strong>systémovému software</strong> kromě operačních systémů patří <strong>ovladače</strong> hardwaru, <strong>firmware</strong> a <strong>utility</strong>.</p>
+
+  <p><strong>Ovladače zařízení (device drivers)</strong> jsou speciální programy, které zajišťují komunikaci OS s konkrétním hardwarem. Bez správného ovladače zařízení nefunguje. Standardní ovladače pro běžná zařízení (flash disk, myš, klávesnice, fotoaparát) bývají součástí moderních OS. Ve Windows je instalaci usnadněn standard <strong>Plug and Play (PnP)</strong>, který automaticky detekuje nové zařízení a případně najde potřebný ovladač. Pokud není driver dostupný v OS, je nutné použít externí instalátor nebo stáhnout ovladač od výrobce. Nevhodný driver může způsobit nefunkčnost zařízení nebo OS.</p>
+
+  <p><strong>Firmware</strong> je programové vybavení pro řízení vestavěných systémů (embedded systems). Řídí například kalkulačky, pevné disky, routery, mobilní telefony nebo fotoaparáty. Dříve se aktualizoval výměnou paměťového média, dnes se často přepisuje pomocí flash paměti. Základní firmware v počítači je <strong>BIOS</strong>, který zajišťuje start počítače a konfiguraci základní desky a připojeného hardware.</p>
+
+  <p><strong>Utility</strong> jsou menší pomocné programy, které umožňují servisní operace potřebné k fungování počítače. Patří sem komprimační programy, diagnostické nástroje, utility pro kontrolu a optimalizaci OS, konverzní programy pro obrázky atd. Řada utilit je součástí OS. Příkladem je <strong>Správce úloh (Task Manager)</strong>, který umožňuje správu programů, sledování procesoru a paměti. Dalšími jsou nástroje pro <strong>defragmentaci</strong> (defrag) nebo kontrolu disku (chkdsk). Některé lze spouštět z příkazového řádku (ping, ipconfig).</p>
+    <p>Firmware zařízení lze často aktualizovat pomocí speciálních <strong>firmware updaterů</strong>, které poskytují výrobci hardwaru. Aktualizace firmwaru může přinést nové funkce, opravy chyb nebo zlepšení výkonu zařízení. Při aktualizaci je však třeba postupovat opatrně, protože nesprávná aktualizace může zařízení poškodit nebo učinit nefunkčním.</p>
+   <p><img src="https://support.8bitdo.com/images/support/tools/update-2.png" alt="firmware"></p>
+</div>
+
+<div class="footer">
+        <hr>
+        <p>&copy; 2026, Ondřej Granzer, IT1</p>
+        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+</div>
+
+</body>
+</html>
