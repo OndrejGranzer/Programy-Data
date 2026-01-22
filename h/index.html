@@ -1,69 +1,119 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Emulace a virtualizace</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  .topnav a.active {
-  background-color: #222;
-  border-bottom: 2px solid #c5c5c5;
-  color: white;
-  font-weight: 650;        
-  padding: 19px 25px;
-  text-transform: uppercase; 
-}
 
+<style>
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-
 body {
-  margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  flex-wrap: wrap;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 70px;      
+  color: #ddd;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topnav a.active {
+  color: #a1e9ff;
+  border-bottom: 3px solid #a1e9ff;
+  background-color: #222;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333;
+  color: #a1e9ff;
 }
 
 .content {
-  margin: 20px auto;
-  max-width: 1500px;
-  padding: 20px;
-  background-color: #ddd;
-  line-height: 2;   
-  font-size: 18px;    
   flex: 1;
+  width: 100%;  
+  margin: 20px 0; 
+  padding: 20px;
+}
+
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.content section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 15px;
 }
 
 .footer {
   background-color: #f1f1f1;
-  padding: 1px 10px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
 }
+
+.footer img {
+  margin-top: 10px;
+  max-height: 50px;
+  text-align: center;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="topnav">
@@ -75,25 +125,42 @@ body {
   <a href="../e/index.html">Instalace programů</a>
   <a href="../f/index.html">Softwarové licence</a>
   <a href="../g/index.html">Software a autorský zákon</a>
-  <a href="../h/index.html"class="active">Emulace a virtualizace</a>
+  <a href="../h/index.html" class="active">Emulace a virtualizace</a>
 </div>
 
 <div class="content">
   <h1>Emulace a virtualizace</h1>
-   <p><strong>Emulátor</strong> je program, který umožňuje běh počítačových programů na jiné platformě (architektuře, operačním systému), než pro kterou byly původně vytvořeny a kterou samy od sebe podporují. Typickým příkladem je program umožňující běh videoher z herních konzol na běžném PC pod MS Windows nebo Linuxem. Jako další příklad může sloužit <strong>DOSBox</strong>, který emuluje starý operační systém MS DOS v prostředí novějších Windows, případně i na zcela odlišných platformách (Linux).</p>
 
-  <p><strong>Virtualizace</strong> označuje v informatice postupy a techniky, které umožňují v počítači přistupovat k dostupným zdrojům jiným způsobem, než jakým fyzicky existují. Virtualizaci je možné realizovat na různých úrovních – od celého počítače (tzv. <strong>virtuální stroj</strong>) po jeho jednotlivé hardwarové komponenty (např. virtuální procesory, virtuální paměť) až po konkrétní softwarové prostředí (virtualizace operačního systému).</p>
+  <section>
+    <h2>Emulátory</h2>
+    <p><strong>Emulátor</strong> je program, který umožňuje běh počítačových programů na jiné platformě (architektuře, operačním systému), než pro kterou byly původně vytvořeny a kterou samy od sebe podporují. Typickým příkladem je program umožňující běh videoher z herních konzol na běžném PC pod MS Windows nebo Linuxem. Jako další příklad může sloužit <strong>DOSBox</strong>, který emuluje starý operační systém MS DOS v prostředí novějších Windows, případně i na zcela odlišných platformách (Linux).</p>
+  </section>
 
-  <p><strong>Virtuální stroj</strong> je speciální software, který dokáže simulovat skutečný počítač (včetně jeho procesoru, paměti, disku a přídavných karet) a umožňuje instalaci OS i dalších programů. Podmínkou virtualizace je výkonný počítač a potřebný software – například <strong>Virtual PC</strong> (Microsoft), <strong>VirtualBox</strong> (Oracle) či <strong>VMWare</strong>.</p>
+  <section>
+    <h2>Virtualizace</h2>
+    <p><strong>Virtualizace</strong> označuje v informatice postupy a techniky, které umožňují v počítači přistupovat k dostupným zdrojům jiným způsobem, než jakým fyzicky existují. Virtualizaci je možné realizovat na různých úrovních – od celého počítače (tzv. <strong>virtuální stroj</strong>) po jeho jednotlivé hardwarové komponenty (např. virtuální procesory, virtuální paměť) až po konkrétní softwarové prostředí (virtualizace operačního systému).</p>
+  </section>
 
-  <p>Virtuální stroje se používají zejména z bezpečnostních důvodů, aby běh některých aplikací nemohl ohrozit hostitelský počítač a jeho operační systém. Často se využívají i pro testování nových aplikací. Velmi přínosná je virtualizace na úrovni serverů – tzv. <strong>konsolidace serverů</strong> nabízí efektivnější využití hardware, oddělený běh síťových aplikací a vyšší bezpečnost dat.</p>
+  <section>
+    <h2>Virtuální stroje</h2>
+    <p><strong>Virtuální stroj</strong> je speciální software, který dokáže simulovat skutečný počítač (včetně jeho procesoru, paměti, disku a přídavných karet) a umožňuje instalaci OS i dalších programů. Podmínkou virtualizace je výkonný počítač a potřebný software – například <strong>Virtual PC</strong> (Microsoft), <strong>VirtualBox</strong> (Oracle) či <strong>VMWare</strong>.</p>
+  </section>
 
-  <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/PCSX2_1.6.0_Windows_10.png/250px-PCSX2_1.6.0_Windows_10.png" alt="Emulátor"></p>
+  <section>
+    <h2>Využití a bezpečnost</h2>
+    <p>Virtuální stroje se používají zejména z bezpečnostních důvodů, aby běh některých aplikací nemohl ohrozit hostitelský počítač a jeho operační systém. Často se využívají i pro testování nových aplikací. Velmi přínosná je virtualizace na úrovni serverů – tzv. <strong>konsolidace serverů</strong> nabízí efektivnější využití hardware, oddělený běh síťových aplikací a vyšší bezpečnost dat.</p>
+  </section>
+
+  <section>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/PCSX2_1.6.0_Windows_10.png/250px-PCSX2_1.6.0_Windows_10.png" alt="Emulátor"></p>
+  </section>
+
 </div>
+
 <div class="footer">
-        <hr>
-        <p>&copy; 2026, Ondřej Granzer, IT1</p>
-        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+  <hr>
+  <p>&copy; 2026, Ondřej Granzer, IT1</p>
+  <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
 </div>
 
 </body>

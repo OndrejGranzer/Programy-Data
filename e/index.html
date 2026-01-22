@@ -1,70 +1,120 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Instalace programů</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-  .topnav a.active {
-  background-color: #222;
-  border-bottom: 2px solid #c5c5c5;
-  color: white;
-  font-weight: 650;        
-  padding: 19px 25px;
-  text-transform: uppercase; 
-}
 
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-
 body {
-  margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  flex-wrap: wrap;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 70px;      
+  color: #ddd;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topnav a.active {
+  color: #a1e9ff;
+  border-bottom: 3px solid #a1e9ff;
+  background-color: #222;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333;
+  color: #a1e9ff;
 }
 
 .content {
-  margin: 20px auto;
-  max-width: 1500px;
-  padding: 20px;
-  background-color: #ddd;
-  line-height: 2;   
-  font-size: 18px;    
   flex: 1;
+  width: 100%;  
+  margin: 20px 0; 
+  padding: 20px;
 }
 
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.content section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 15px;
+}
 
 .footer {
   background-color: #f1f1f1;
-  padding: 1px 10px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
 }
+
+.footer img {
+  margin-top: 10px;
+  max-height: 50px;
+  text-align: center;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="topnav">
@@ -73,7 +123,7 @@ body {
   <a href="../b/index.html">Operační systémy</a>
   <a href="../c/index.html">Ovladače, firmware a utility</a>
   <a href="../d/index.html">Aplikační software</a>
-  <a href="../e/index.html"class="active">Instalace programů</a>
+  <a href="../e/index.html" class="active">Instalace programů</a>
   <a href="../f/index.html">Softwarové licence</a>
   <a href="../g/index.html">Software a autorský zákon</a>
   <a href="../h/index.html">Emulace a virtualizace</a>
@@ -81,28 +131,51 @@ body {
 
 <div class="content">
   <h1>Instalace programů</h1>
-  <p><strong>Instalace programu</strong>. Program, který si koupíme, dostaneme na CD/DVD disku nebo si ho stáhneme z Internetu. Po vložení instalačního CD/DVD se většinou automaticky spustí instalační program (autorun.inf), u staženého softwaru je nutné spustit instalaci sami (např. poklepáním na <strong>install.exe</strong> či <strong>setup.exe</strong>). Průvodce instalací (wizard) často vyžádá sériové číslo, souhlas s licenčními podmínkami, cílovou složku pro instalaci a umístění zástupců. Program poté nahraje všechny soubory, provede konfiguraci a vytvoří zástupce. Pro instalaci je obvykle nutné mít práva správce.</p>
 
-  <p><strong>Odinstalace programu</strong>. Úplné odstranění bývá složitější, zejména ve Windows, protože program ukládá soubory do mnoha složek, sdílí DLL knihovny a zapisuje do registru. Odinstalátor nemusí vše odstranit, proto může dojít k hromadění nepotřebných souborů. K čištění lze používat utility jako <strong>RegCleaner</strong>. V Linuxu je oddělení systémových a uživatelských souborů lepší, takže odstranění programu je spolehlivější.</p>
+  <section>
+    <h2>Instalace programu</h2>
+    <p><strong>Instalace programu</strong>. Program, který si koupíme, dostaneme na CD/DVD disku nebo si ho stáhneme z Internetu. Po vložení instalačního CD/DVD se většinou automaticky spustí instalační program (autorun.inf), u staženého softwaru je nutné spustit instalaci sami (např. poklepáním na <strong>install.exe</strong> či <strong>setup.exe</strong>). Průvodce instalací (wizard) často vyžádá sériové číslo, souhlas s licenčními podmínkami, cílovou složku pro instalaci a umístění zástupců. Program poté nahraje všechny soubory, provede konfiguraci a vytvoří zástupce. Pro instalaci je obvykle nutné mít práva správce.</p>
+  </section>
 
-  <p><strong>Lokalizace</strong>. Překlad programu do češtiny. Firmy často pocházejí z anglicky mluvících zemí, proto originály existují v angličtině. Lokalizace zahrnuje překlad nabídek, dialogů, nápovědy, manuálu a někdy tvorbu slovníku pro dělení slov a korekturu pravopisu.</p>
+  <section>
+    <h2>Odinstalace programu</h2>
+    <p><strong>Odinstalace programu</strong>. Úplné odstranění bývá složitější, zejména ve Windows, protože program ukládá soubory do mnoha složek, sdílí DLL knihovny a zapisuje do registru. Odinstalátor nemusí vše odstranit, proto může dojít k hromadění nepotřebných souborů. K čištění lze používat utility jako <strong>RegCleaner</strong>. V Linuxu je oddělení systémových a uživatelských souborů lepší, takže odstranění programu je spolehlivější.</p>
+  </section>
 
-  <p><strong>Platforma a kompatibilita</strong>. Program musí být určen pro konkrétní operační systém (Windows, Linux, OS X). Některé programy jsou multiplatformní. Problémy mohou nastat při rozdílných verzích OS nebo mezi 32bit a 64bit systémy. Ve Windows lze v případě problémů použít kartu <strong>Kompatibilita</strong> v panelu vlastností zástupce programu.</p>
+  <section>
+    <h2>Lokalizace</h2>
+    <p><strong>Lokalizace</strong>. Překlad programu do češtiny. Firmy často pocházejí z anglicky mluvících zemí, proto originály existují v angličtině. Lokalizace zahrnuje překlad nabídek, dialogů, nápovědy, manuálu a někdy tvorbu slovníku pro dělení slov a korekturu pravopisu.</p>
+  </section>
 
-  <p><strong>Verze programů</strong>. Označují číslem (např. 1.0). Aktualizace (update) opravují dílčí chyby a bezpečnostní problémy, upgrade na vyšší verzi (např. 2.0) přináší větší změny a nové funkce. Před upgradem je třeba ověřit doporučenou konfiguraci počítače. Snížení verze programu se nazývá <strong>downgrade</strong>.</p>
+  <section>
+    <h2>Platforma a kompatibilita</h2>
+    <p><strong>Platforma a kompatibilita</strong>. Program musí být určen pro konkrétní operační systém (Windows, Linux, OS X). Některé programy jsou multiplatformní. Problémy mohou nastat při rozdílných verzích OS nebo mezi 32bit a 64bit systémy. Ve Windows lze v případě problémů použít kartu <strong>Kompatibilita</strong> v panelu vlastností zástupce programu.</p>
+  </section>
 
-  <p><strong>Registrace programu</strong>. Zaevidování uživatele u výrobce. Registrace je nepovinná, přináší ale výhody: 
-  <p>• nárok na upgrade za sníženou cenu;</p>
-  <p>• zasílání materiálů a informací o nových verzích;</p>
-  <p>• nárok na zákaznickou linku při potížích s programem.</p>
-  </p>
+  <section>
+    <h2>Verze programů</h2>
+    <p><strong>Verze programů</strong>. Označují číslem (např. 1.0). Aktualizace (update) opravují dílčí chyby a bezpečnostní problémy, upgrade na vyšší verzi (např. 2.0) přináší větší změny a nové funkce. Před upgradem je třeba ověřit doporučenou konfiguraci počítače. Snížení verze programu se nazývá <strong>downgrade</strong>.</p>
+  </section>
+
+  <section>
+    <h2>Registrace programu</h2>
+    <p><strong>Registrace programu</strong>. Zaevidování uživatele u výrobce. Registrace je nepovinná, přináší ale výhody:</p>
+    <ul>
+      <li>nárok na upgrade za sníženou cenu;</li>
+      <li>zasílání materiálů a informací o nových verzích;</li>
+      <li>nárok na zákaznickou linku při potížích s programem.</li>
+    </ul>
+  </section>
+
+  <section>
     <p><img src="https://www.zssromotovo.cz/inf/web/obrazky/instalace6.jpg" alt="Ukázka instalace"></p>
+  </section>
+
 </div>
 
 <div class="footer">
-        <hr>
-        <p>&copy; 2026, Ondřej Granzer, IT1</p>
-        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+  <p>&copy; 2026, Ondřej Granzer, IT1</p>
+  <img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo">
 </div>
 
 </body>

@@ -1,69 +1,111 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Operační systémy</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-  .topnav a.active {
-  background-color: #222;
-  border-bottom: 2px solid #c5c5c5;
-  color: white;
-  font-weight: 650;        
-  padding: 19px 25px;
-  text-transform: uppercase; 
-}
 
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-
 body {
-  margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  flex-wrap: wrap;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 70px;      
+  color: #ddd;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topnav a.active {
+  color: #a1e9ff;
+  border-bottom: 3px solid #a1e9ff;
+  background-color: #222;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333;
+  color: #a1e9ff;
 }
 
 .content {
-  margin: 20px auto;
-  max-width: 1500px;
-  padding: 20px;
-  background-color: #ddd;
-  line-height: 2;   
-  font-size: 18px;    
   flex: 1;
+  width: 100%;  
+  margin: 20px 0; 
+  padding: 20px;
+}
+
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.content section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
 }
 
 .footer {
   background-color: #f1f1f1;
-  padding: 1px 10px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer img {
+  margin-top: 10px;
+  max-height: 50px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="topnav">
@@ -79,28 +121,47 @@ body {
 </div>
 
 <div class="content">
-  <h1>Operační systémy</h1>
-  <p><strong>Programové vybavení (software)</strong> je podmínkou využití <strong>technického vybavení (hardware)</strong>. V raných dobách byly programy vytvářeny vždy pro konkrétní hardware. S masovou výrobou počítačů vznikla potřeba <strong>systémových programů</strong>, které zajišťovaly základní operace s hardwarem a poskytovaly prostředí pro běh aplikací.</p>
+<h1>Operační systémy</h1>
 
-  <p>Základním programovým vybavením počítačů jsou <strong>operační systémy (OS)</strong>. Jejich nejdůležitější funkcí je <strong>řízení hardware</strong> prostřednictvím jádra systému, které spravuje procesor, paměť, disková média a další zařízení. Jádro pro své operace využívá <strong>ovladače (drivers)</strong>.</p>
+<section>
+<h2>Úvod do operačních systémů</h2>
+<p><strong>Operační systém (OS)</strong> je klíčový software, který umožňuje počítači komunikovat s hardwarem a spouštět aplikace. Bez OS by počítač nebyl schopen pracovat s daty ani s periferními zařízeními.</p>
+<p>OS zajišťuje správu procesoru, paměti, úložišť a dalších zařízení, přičemž k tomu využívá <strong>ovladače (drivers)</strong>. Poskytuje také rozhraní pro uživatele a programy.</p>
+</section>
 
-  <p>Nezbytnou součástí OS je <strong>aplikační rozhraní (API)</strong>, které poskytuje programátorům nástroje pro vývoj aplikací. <strong>Uživatelské rozhraní</strong> umožňuje ovládání OS a spouštění aplikací. Starší OS se často ovládaly příkazovým řádkem (<strong>CLI</strong>), moderní mají <strong>grafické uživatelské rozhraní (GUI)</strong> s okny a grafickými prvky.</p>
+<section>
+<h2>Uživatelské a programové rozhraní</h2>
+<p>Součástí OS je <strong>uživatelské rozhraní</strong> (GUI nebo CLI) a <strong>aplikační rozhraní (API)</strong>. GUI umožňuje ovládání pomocí oken a ikon, zatímco CLI využívá textové příkazy.</p>
+<p>API pak poskytuje programátorům nástroje pro vytváření aplikací kompatibilních s OS.</p>
+</section>
 
-  <p>Na počátku moderních OS byl <strong>UNIX</strong>, víceúlohový a víceuživatelský systém používaný od 70. let. Z jeho principů vycházely další systémy, například MS DOS (Microsoft) a Mac OS (Apple). Mac OS zavedl grafické rozhraní, které se stalo základem MS Windows. Od té doby se také rozšířil <strong>Linux</strong>.</p>
+<section>
+<h2>Historie OS</h2>
+<p>Prvním moderním OS byl <strong>UNIX</strong>, který byl víceuživatelský a podporoval multitasking. Z jeho principů vycházely systémy jako MS DOS, Mac OS a následně Windows a Linux.</p>
+<p>Mac OS přinesl grafické rozhraní, které se stalo standardem i pro další desktopové OS.</p>
+</section>
 
-  <p>Operační systémy dnes dominují na různých typech zařízení:</p>
-  <p>&bull; <strong>Síťové servery</strong> (např. Windows Server, Linux, Unix)</p>
-  <p>&bull; <strong>Desktopy a notebooky</strong> (Windows, Linux Ubuntu, OS X)</p>
-  <p>&bull; <strong>Mobilní zařízení</strong> (Android, iOS, Windows Phone, Symbian)</p>
-  <p>&bull; <strong>RTOS</strong> (Real-Time Operating System) – systémy reálného času pro průmyslové a specializované aplikace.</p>
+<section>
+<h2>Druhy operačních systémů</h2>
+<p>Operační systémy se dnes používají na různých typech zařízení:</p>
+<ul>
+<li><strong>Síťové servery</strong> – Windows Server, Linux, Unix</li>
+<li><strong>Desktopy a notebooky</strong> – Windows, Linux Ubuntu, macOS</li>
+<li><strong>Mobilní zařízení</strong> – Android, iOS, Windows Phone</li>
+<li><strong>RTOS</strong> – systémy reálného času pro průmyslové a specializované aplikace</li>
+</ul>
+<p>Zatímco desktopové OS umožňují multitasking, <strong>RTOS</strong> vykonávají úlohy s přesností a bez prodlevy.</p>
+</section>
 
-  <p>Zatímco desktopové OS umožňují paralelní operace, <strong>RTOS</strong> provádějí úlohy bez prodlevy a s vysokou spolehlivostí v reálném čase.</p>
-  <p><img src="https://af9ad3a2cf.cbaul-cdnwnd.com/b25ba04d0633698e26d81b5ecdcd2225/200000083-82b2e83ab0/programy.jpg" alt="Operační systémy"></p>
+<section>
+<p><img src="https://support.8bitdo.com/images/support/tools/update-2.png" alt="Operační systémy"></p>
+</section>
+
 </div>
+
 <div class="footer">
-        <hr>
-        <p>&copy; 2026, Ondřej Granzer, IT1</p>
-        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+  <p>&copy; 2026, Ondřej Granzer, IT1</p>
+  <img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo">
 </div>
 
 </body>

@@ -1,70 +1,129 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Softwarové licence</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  .topnav a.active {
-  background-color: #222;
-  border-bottom: 2px solid #c5c5c5;
-  color: white;
-  font-weight: 650;        
-  padding: 19px 25px;
-  text-transform: uppercase; 
-}
 
+<style>
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-
 body {
-  margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  flex-wrap: wrap;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 70px;      
+  color: #ddd;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topnav a.active {
+  color: #a1e9ff;
+  border-bottom: 3px solid #a1e9ff;
+  background-color: #222;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333;
+  color: #a1e9ff;
 }
 
 .content {
-  margin: 20px auto;
-  max-width: 1500px;
-  padding: 20px;
-  background-color: #ddd;
-  line-height: 2;   
-  font-size: 18px;    
   flex: 1;
+  width: 100%;  
+  margin: 20px 0; 
+  padding: 20px;
 }
 
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.content section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.content h3 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 15px;
+}
+
+.content ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
 
 .footer {
   background-color: #f1f1f1;
-  padding: 1px 10px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer img {
+  margin-top: 10px;
+  max-height: 50px;
+  text-align: center;
 }
 </style>
 </head>
+
 <body>
 
 <div class="topnav">
@@ -74,41 +133,69 @@ body {
   <a href="../c/index.html">Ovladače, firmware a utility</a>
   <a href="../d/index.html">Aplikační software</a>
   <a href="../e/index.html">Instalace programů</a>
-  <a href="../f/index.html"class="active">Softwarové licence</a>
+  <a href="../f/index.html" class="active">Softwarové licence</a>
   <a href="../g/index.html">Software a autorský zákon</a>
   <a href="../h/index.html">Emulace a virtualizace</a>
 </div>
 
 <div class="content">
   <h1>Softwarové licence</h1>
-  <p>Uživatel nemůže koupit program jako celek se všemi právy k němu, ale může získat pouze <strong>licenci</strong> k jeho užívání. Nesmí žádným způsobem upravovat dílo bez výslovného souhlasu autora. Licence je většinou nepřenosná.</p>
 
-  <p><strong>Multilicence</strong>. Umožňuje provozovat program na více počítačích (např. ve firmách nebo školách) za výhodnější cenu než jednotlivé licence.</p>
+  <section>
+    <h2>Úvod</h2>
+    <p>Uživatel nemůže koupit program jako celek se všemi právy k němu, ale může získat pouze <strong>licenci</strong> k jeho užívání. Nesmí žádným způsobem upravovat dílo bez výslovného souhlasu autora. Licence je většinou nepřenosná.</p>
+  </section>
 
-  <p><strong>Komerční software</strong>. Proprietární software s uzavřeným kódem (closed source). Autor upravuje podmínky používání (např. EULA). Zdrojové kódy nejsou dostupné, software je šířen za úplatu a licence je omezená co do počtu instalací nebo možnosti modifikace.</p>
+  <section>
+    <h2>Multilicence</h2>
+    <p><strong>Multilicence</strong> umožňuje provozovat program na více počítačích (např. ve firmách nebo školách) za výhodnější cenu než jednotlivé licence.</p>
+  </section>
 
-  <p><strong>OEM (Original Equipment Manufacturer)</strong>. Programy dodávané jako součást hardware, často levněji, pouze spolu s daným zařízením.</p>
+  <section>
+    <h2>Komerční software</h2>
+    <p><strong>Komerční software</strong> je proprietární software s uzavřeným kódem (closed source). Autor upravuje podmínky používání (např. EULA). Zdrojové kódy nejsou dostupné, software je šířen za úplatu a licence je omezená co do počtu instalací nebo možnosti modifikace.</p>
+  </section>
 
-  <p><strong>Demoverze a zkušební verze</strong>. Programy s omezenými funkcemi nebo časově omezené. Demoverze mohou mít blokované ukládání nebo tisk; trial verze umožňují plnou funkčnost jen po omezenou dobu.</p>
+  <section>
+    <h2>OEM</h2>
+    <p><strong>OEM (Original Equipment Manufacturer)</strong>. Programy dodávané jako součást hardware, často levněji, pouze spolu s daným zařízením.</p>
+  </section>
 
-  <p><strong>Shareware</strong>. Program je dočasně zdarma, po určité době je třeba zaplatit autorovi poplatek pro legální používání.</p>
+  <section>
+    <h2>Demoverze a trial</h2>
+    <p><strong>Demoverze a zkušební verze</strong>. Programy s omezenými funkcemi nebo časově omezené. Demoverze mohou mít blokované ukládání nebo tisk; trial verze umožňují plnou funkčnost jen po omezenou dobu.</p>
+  </section>
 
-  <p><strong>Freeware</strong>. Program lze používat a rozšiřovat zdarma, bez možnosti komerčního šíření nebo úprav díla. Někdy freeware může později přejít na komerční šíření.</p>
+  <section>
+    <h2>Shareware a Freeware</h2>
+    <p><strong>Shareware</strong> – program je dočasně zdarma, po určité době je třeba zaplatit autorovi poplatek pro legální používání.</p>
+    <p><strong>Freeware</strong> – program lze používat a rozšiřovat zdarma, bez možnosti komerčního šíření nebo úprav díla. Někdy freeware může později přejít na komerční šíření.</p>
+  </section>
 
-  <h3>PUBLIC DOMAIN</h3>
-  <p>Programy k volnému užití, které lze používat, šířit i upravovat. Autoři se vzdávají některých práv a nechávají uživatele nakládat s programem podle libosti.</p>
+  <section>
+    <h2>Public Domain</h2>
+    <p>Programy k volnému užití, které lze používat, šířit i upravovat. Autoři se vzdávají některých práv a nechávají uživatele nakládat s programem podle libosti.</p>
+  </section>
 
-  <h3>SVOBODNÝ SOFTWARE A GNU/LINUX</h3>
-  <p>Svobodný software (free software, nezaměňovat s freeware) je šířen většinou pod <strong>Open Source</strong> licencí (např. GPL). Myšlenku svobodného softwaru formuloval Richard M. Stallman v 80. letech a založil projekt GNU (GNU is Not Unix). Systém GNU brzy obsahoval všechny komponenty kromě jádra, které vytvořil Linus Torvalds v roce 1991, vznikl tak <strong>Linux</strong>. Kombinace GNU a Linuxu tvoří systém <strong>GNU/Linux</strong>, dnes používaný miliony uživatelů.</p>
+  <section>
+    <h2>Svobodný software a GNU/Linux</h2>
+    <p>Svobodný software (free software, nezaměňovat s freeware) je šířen většinou pod <strong>Open Source</strong> licencí (např. GPL). Myšlenku svobodného softwaru formuloval Richard M. Stallman v 80. letech a založil projekt GNU (GNU is Not Unix). Systém GNU brzy obsahoval všechny komponenty kromě jádra, které vytvořil Linus Torvalds v roce 1991, vznikl tak <strong>Linux</strong>. Kombinace GNU a Linuxu tvoří systém <strong>GNU/Linux</strong>, dnes používaný miliony uživatelů.</p>
+  </section>
 
-  <h3>OPEN SOURCE A LICENCE GPL</h3>
-  <p>Open Source znamená otevřený zdroj. Programy jsou šířeny se zdrojovými kódy, takže kdokoliv s potřebnými znalostmi může zkoumat, upravovat a používat software, ale musí opět distribuovat jako Open Source. Podmínky stanovuje licence <strong>GPL (General Public Licence)</strong>. Nejznámější je <strong>GNU/GPL</strong>. Prvními vývojáři byli studenti a zaměstnanci amerických univerzit. Komerční firmy často přispívají vývojářům Open Source. Některé vlády (např. Číny a Japonska) podporují vývoj volně šiřitelného softwaru, aby občané mohli používat systémy bez nákupu drahých komerčních programů.</p>
-  <p><img src="https://st2.depositphotos.com/1845839/6705/v/450/depositphotos_67050607-stock-illustration-word-cloud-software-license.jpg" alt="Licence"></p>
+  <section>
+    <h2>Open Source a licence GPL</h2>
+    <p>Open Source znamená otevřený zdroj. Programy jsou šířeny se zdrojovými kódy, takže kdokoliv s potřebnými znalostmi může zkoumat, upravovat a používat software, ale musí opět distribuovat jako Open Source. Podmínky stanovuje licence <strong>GPL (General Public Licence)</strong>. Nejznámější je <strong>GNU/GPL</strong>. Prvními vývojáři byli studenti a zaměstnanci amerických univerzit. Komerční firmy často přispívají vývojářům Open Source. Některé vlády (např. Číny a Japonska) podporují vývoj volně šiřitelného softwaru, aby občané mohli používat systémy bez nákupu drahých komerčních programů.</p>
+  </section>
+
+  <section>
+    <p><img src="https://st2.depositphotos.com/1845839/6705/v/450/depositphotos_67050607-stock-illustration-word-cloud-software-license.jpg" alt="Licence"></p>
+  </section>
+
 </div>
+
 <div class="footer">
-        <hr>
-        <p>&copy; 2026, Ondřej Granzer, IT1</p>
-        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+  <p>&copy; 2026, Ondřej Granzer, IT1</p>
+  <img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo">
 </div>
 
 </body>

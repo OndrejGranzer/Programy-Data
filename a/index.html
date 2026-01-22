@@ -1,75 +1,131 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programové a datové soubory</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
 <style>
-  .topnav a.active {
-  background-color: #222;
-  border-bottom: 2px solid #c5c5c5;
-  color: white;
-  font-weight: 650;        
-  padding: 19px 25px;
-  text-transform: uppercase; 
-}
 
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
-
 
 body {
-  margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  flex-wrap: wrap;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 70px;      
+  color: #ddd;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+}
+
+.topnav a.active {
+  color: #a1e9ff;
+  border-bottom: 3px solid #a1e9ff;
+  background-color: #222;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333;
+  color: #a1e9ff;
 }
 
 .content {
-  margin: 20px auto;
-  max-width: 1500px;
-      padding: 20px;
-  background-color: #ddd;
-  line-height: 2;   
-    font-size: 18px;    
   flex: 1;
+  width: 100%;  
+  margin: 20px 0; 
+  padding: 20px;
+}
+
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
 }
 
 .footer {
   background-color: #f1f1f1;
-  padding: 1px 10px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer img {
+  margin-top: 10px;
+  max-height: 50px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="topnav">
   <a href="../index.html">Úvod</a>
   <a href="../a/index.html" class="active">Programové a datové soubory</a>
-  <a href="../b/index.html" >Operační systémy</a>
+  <a href="../b/index.html">Operační systémy</a>
   <a href="../c/index.html">Ovladače, firmware a utility</a>
   <a href="../d/index.html">Aplikační software</a>
   <a href="../e/index.html">Instalace programů</a>
@@ -79,31 +135,51 @@ body {
 </div>
 
 <div class="content">
-  <h1>Programové a datové soubory</h1>
-  <p><strong>Soubor (file)</strong> je množina souvisejících dat uložených na diskové jednotce.</p>
+<h1>Programové a datové soubory</h1>
 
- <p><strong>Soubor (file)</strong> je množina souvisejících dat uložených na diskové jednotce. Název souboru se skládá z jména a přípony, která naznačuje typ souboru. K dalším vlastnostem patří jeho velikost, autor, datum vytvoření, datum změny, atributy a přístupová práva.</p>
+<section>
+<h2>Co je to soubor</h2>
+<p><strong>Soubor (file)</strong> je množina souvisejících dat uložených na diskové jednotce. Slouží k ukládání informací tak, aby s nimi mohl operační systém a programy dále pracovat.</p>
+<p>Název souboru se skládá ze <strong>jména</strong> a <strong>přípony</strong>, která obvykle určuje jeho typ. Mezi další důležité vlastnosti patří velikost souboru, autor, datum vytvoření, datum poslední změny, atributy a přístupová práva.</p>
+</section>
 
-  <p><strong>Adresáře (directories, folders)</strong> tvoří hierarchickou strukturu. Základem je kořenový adresář (root) označený „/“ (Unix, Linux) nebo „\“ (Windows). Každý adresář může obsahovat soubory i podadresáře. <strong>Cesta (path)</strong> ukazuje umístění souboru.</p>
+<section>
+<h2>Adresáře a cesty</h2>
+<p><strong>Adresáře (directories, folders)</strong> slouží k organizaci souborů do přehledné hierarchické struktury. Základem této struktury je <strong>kořenový adresář (root)</strong>, který je označen symbolem <code>/</code> v systémech Unix a Linux nebo <code>\</code> ve Windows.</p>
+<p>Každý adresář může obsahovat soubory i další podadresáře. <strong>Cesta (path)</strong> pak určuje přesné umístění souboru v adresářové struktuře.</p>
+</section>
 
-  <p>Pro operace se soubory někdy využíváme <strong>zástupné znaky (wildcards)</strong>:</p>
-  <p>&bull; symbol * nahrazuje libovolný počet znaků (např. *.*);</p>
-  <p>&bull; symbol ? nahrazuje jeden libovolný znak (např. s?s.txt).</p>
+<section>
+<h2>Zástupné znaky</h2>
+<p>Pro práci se soubory se někdy používají <strong>zástupné znaky (wildcards)</strong>, které umožňují označit více souborů najednou:</p>
+<ul>
+<li><strong>*</strong> – nahrazuje libovolný počet znaků (např. <code>*.*</code>)</li>
+<li><strong>?</strong> – nahrazuje právě jeden libovolný znak (např. <code>s?s.txt</code>)</li>
+</ul>
+</section>
 
-  <p><strong>Programové soubory</strong> obsahují instrukce, podle nichž procesor spolupracuje s hardwarem. Mohou být ve formě binárního kódu, zdrojového kódu nebo skriptů. Větší programy jsou tvořeny knihovnami a speciálními soubory (např. DRV, SYS, DLL).</p>
+<section>
+<h2>Programové soubory</h2>
+<p><strong>Programové soubory</strong> obsahují instrukce, podle kterých procesor spolupracuje s hardwarem počítače. Mohou být uloženy ve formě binárního kódu, zdrojového kódu nebo skriptů.</p>
+<p>Větší programy se obvykle skládají z více částí, například z knihoven a speciálních systémových souborů (<code>DRV</code>, <code>SYS</code>, <code>DLL</code>).</p>
+<p><strong>Spustitelné soubory</strong> (např. <code>.exe</code>, <code>.com</code>, <code>.sh</code>) slouží ke spuštění programu. <strong>Rezidentní programy</strong> (služby, démoni) jsou automaticky spuštěny po startu operačního systému.</p>
+</section>
 
-  <p>Spustitelné soubory (např. .exe, .com, .sh) slouží ke spuštění programu. <strong>Rezidentní programy</strong> (služby, démony) jsou spuštěny automaticky po startu OS.</p>
+<section>
+<h2>Datové soubory</h2>
+<p><strong>Datové soubory</strong> obsahují uživatelská data, jako jsou texty, čísla, grafika nebo zvuk. K jejich zpracování jsou potřeba konkrétní programy.</p>
+<p>Proto jsou přípony datových souborů často propojeny s určitými aplikacemi, například <code>DOCX</code> s MS Word nebo <code>XLSX</code> s MS Excel.</p>
+</section>
 
-  <p><strong>Datové soubory</strong> obsahují různé druhy dat (text, čísla, grafiku, zvuk). K jejich zpracování se používají konkrétní programy, proto jsou přípony často propojeny s aplikacemi (např. DOCX – MS Word, XLSX – MS Excel).</p>
-  <p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Operating_system_placement-cs.svg" alt="Vysvětlivka"></p>
+<section>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Operating_system_placement-cs.svg" alt="Schéma umístění operačního systému">
+</section>
+
 </div>
 
-
-
 <div class="footer">
-        <hr>
-        <p>&copy; 2026, Ondřej Granzer, IT1</p>
-        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+  <p>&copy; 2026, Ondřej Granzer, IT1</p>
+  <img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo">
 </div>
 
 </body>

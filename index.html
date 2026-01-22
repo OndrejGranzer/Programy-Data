@@ -1,70 +1,117 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Úvod</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  .topnav a.active {
-  background-color: #222;
-  border-bottom: 2px solid #c5c5c5;
-  color: white;
-  font-weight: 650;        /* hodně tučné */   
-  padding: 19px 25px;
-  text-transform: uppercase;
-}
 
+<style>
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .topnav {
-  overflow: hidden;  
-  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  flex-wrap: wrap;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 70px;      
+  color: #ddd;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topnav a.active {
+  color: #a1e9ff;
+  border-bottom: 3px solid #a1e9ff;
+  background-color: #222;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333;
+  color: #a1e9ff;
 }
 
-
 .content {
-  margin: 20px auto;
-  max-width: 1500px;
-      padding: 20px;
-  background-color: #ddd;
-  line-height: 2;   
-    font-size: 18px;    
   flex: 1;
+  width: 100%;  
+  margin: 20px 0; 
+  padding: 20px;
+}
+
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.content section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.content p {
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
 .footer {
   background-color: #f1f1f1;
-  padding: 1px 10px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer img {
+  margin-top: 10px;
+  max-height: 50px;
+  text-align: center;
 }
 </style>
 </head>
+
 <body>
+
 <div class="topnav">
   <a href="./index.html" class="active">Úvod</a>
   <a href="./a/index.html">Programové a datové soubory</a>
@@ -79,31 +126,42 @@ body {
 
 <div class="content">
   <h1>Úvod</h1>
- <p>
-    Počítače a moderní zařízení dnes nelze představit bez <strong>softwaru a datových souborů</strong>. <strong>Software</strong> je soubor programů, které umožňují <strong>hardwaru</strong> vykonávat konkrétní úkoly – od jednoduchého <strong>zpracování textu</strong>, přes <strong>přehrávání médií</strong>, až po <strong>složité výpočty a správu dat</strong>. Každý počítač, tablet nebo telefon potřebuje kombinaci softwaru a souborů, aby mohl fungovat.
-  </p>
-  <p>
-    <strong>Programové soubory</strong> obsahují instrukce, podle kterých zařízení provádí své operace. <strong>Datové soubory</strong> uchovávají informace, se kterými programy pracují – mohou to být dokumenty, obrázky, zvuky nebo databázová data. Díky jasnému rozdělení těchto souborů je možné počítač efektivně spravovat a udržovat pořádek.
-  </p>
-  <p>
-    Základem fungování každého počítače je <strong>operační systém</strong>. Ten zajišťuje komunikaci mezi hardwarem a programy, spravuje paměť, disky, periferní zařízení a umožňuje uživatelům ovládat počítač prostřednictvím grafického rozhraní nebo příkazového řádku. Díky operačnímu systému mohou aplikace běžet nezávisle a bezpečně.
-  </p>
-  <p>
-    <strong>Aplikační software</strong> zahrnuje <strong>programy</strong>, které využíváme pro práci, studium či zábavu – kancelářské balíky, grafické editory, multimediální přehrávače, herní aplikace nebo specializované programy pro konkrétní účely. Tyto programy často využívají knihovny a doplňkové soubory, které obsahují funkce připravené k okamžitému použití.
-  </p>
-  <p>
-    Správná organizace souborů a znalost typů programového vybavení umožňuje uživateli pracovat efektivněji a předcházet problémům, jako jsou konflikty softwaru nebo ztráta dat. Porozumění principům softwaru a souborů je klíčem k lepšímu využívání počítače a bezpečnému zacházení s daty.
-  </p>
-  <p>
-    Na této stránce se seznámíte s různými typy souborů, způsoby jejich organizace, funkcí operačního systému a základního i aplikačního softwaru. Cílem je nabídnout přehled, který vám pomůže lépe porozumět principům fungování moderních počítačových systémů.
-  </p>
-</div>
+
+  <section>
+    <h2>Role softwaru</h2>
+    <p>Počítače a moderní zařízení dnes nelze představit bez <strong>softwaru a datových souborů</strong>. <strong>Software</strong> je soubor programů, které umožňují <strong>hardwaru</strong> vykonávat konkrétní úkoly – od jednoduchého <strong>zpracování textu</strong>, přes <strong>přehrávání médií</strong>, až po <strong>složité výpočty a správu dat</strong>. Každý počítač, tablet nebo telefon potřebuje kombinaci softwaru a souborů, aby mohl fungovat.</p>
+  </section>
+
+  <section>
+    <h2>Programové a datové soubory</h2>
+    <p><strong>Programové soubory</strong> obsahují instrukce, podle kterých zařízení provádí své operace. <strong>Datové soubory</strong> uchovávají informace, se kterými programy pracují – mohou to být dokumenty, obrázky, zvuky nebo databázová data. Díky jasnému rozdělení těchto souborů je možné počítač efektivně spravovat a udržovat pořádek.</p>
+  </section>
+
+  <section>
+    <h2>Operační systém</h2>
+    <p>Základem fungování každého počítače je <strong>operační systém</strong>. Ten zajišťuje komunikaci mezi hardwarem a programy, spravuje paměť, disky, periferní zařízení a umožňuje uživatelům ovládat počítač prostřednictvím grafického rozhraní nebo příkazového řádku. Díky operačnímu systému mohou aplikace běžet nezávisle a bezpečně.</p>
+  </section>
+
+  <section>
+    <h2>Aplikační software</h2>
+    <p><strong>Aplikační software</strong> zahrnuje <strong>programy</strong>, které využíváme pro práci, studium či zábavu – kancelářské balíky, grafické editory, multimediální přehrávače, herní aplikace nebo specializované programy pro konkrétní účely. Tyto programy často využívají knihovny a doplňkové soubory, které obsahují funkce připravené k okamžitému použití.</p>
+  </section>
+
+  <section>
+    <h2>Správa a organizace</h2>
+    <p>Správná organizace souborů a znalost typů programového vybavení umožňuje uživateli pracovat efektivněji a předcházet problémům, jako jsou konflikty softwaru nebo ztráta dat. Porozumění principům softwaru a souborů je klíčem k lepšímu využívání počítače a bezpečnému zacházení s daty.</p>
+  </section>
+
+  <section>
+    <h2>Cíl stránky</h2>
+    <p>Na této stránce se seznámíte s různými typy souborů, způsoby jejich organizace, funkcí operačního systému a základního i aplikačního softwaru. Cílem je nabídnout přehled, který vám pomůže lépe porozumět principům fungování moderních počítačových systémů.</p>
+  </section>
 </div>
 
 <div class="footer">
-        <hr>
-        <p>&copy; 2026, Ondřej Granzer, IT1</p>
-        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+  <hr>
+  <p>&copy; 2026, Ondřej Granzer, IT1</p>
+  <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
 </div>
 
 </body>

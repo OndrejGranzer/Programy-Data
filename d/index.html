@@ -1,70 +1,119 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aplikační software</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-  .topnav a.active {
-  background-color: #222;
-  border-bottom: 2px solid #c5c5c5;
-  color: white;
-  font-weight: 650;        
-  padding: 19px 25px;
-  text-transform: uppercase; 
-}
 
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-
 body {
-  margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  flex-wrap: wrap;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 70px;      
+  color: #ddd;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topnav a.active {
+  color: #a1e9ff;
+  border-bottom: 3px solid #a1e9ff;
+  background-color: #222;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #333;
+  color: #a1e9ff;
 }
 
 .content {
-  margin: 20px auto;
-  max-width: 1500px;
-  padding: 20px;
-  background-color: #ddd;
-  line-height: 2;   
-  font-size: 18px;    
   flex: 1;
+  width: 100%;  
+  margin: 20px 0; 
+  padding: 20px;
 }
 
+.content section {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+}
+
+.content section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 15px;
+}
 
 .footer {
   background-color: #f1f1f1;
-  padding: 1px 10px;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer img {
+  margin-top: 10px;
+  max-height: 50px;
+  text-align: center;
 }
 </style>
 </head>
+
 <body>
 
 <div class="topnav">
@@ -72,7 +121,7 @@ body {
   <a href="../a/index.html">Programové a datové soubory</a>
   <a href="../b/index.html">Operační systémy</a>
   <a href="../c/index.html">Ovladače, firmware a utility</a>
-  <a href="../d/index.html"class="active">Aplikační software</a>
+  <a href="../d/index.html" class="active">Aplikační software</a>
   <a href="../e/index.html">Instalace programů</a>
   <a href="../f/index.html">Softwarové licence</a>
   <a href="../g/index.html">Software a autorský zákon</a>
@@ -81,29 +130,39 @@ body {
 
 <div class="content">
   <h1>Aplikační software</h1>
-  <p><strong>Aplikace</strong> jsou uživatelské programy určené pro jeden nebo více specifických účelů. Pro jejich spouštění je nezbytná přítomnost základního software – <strong>operačního systému</strong>.</p>
 
-  <h3 style="text-align: center; margin-top: 20px;">ZÁKLADNÍ SKUPINY APLIKACÍ</h3>
+  <section>
+    <h2>Úvod</h2>
+    <p><strong>Aplikace</strong> jsou uživatelské programy určené pro jeden nebo více specifických účelů. Pro jejich spouštění je nezbytná přítomnost základního software – <strong>operačního systému</strong>.</p>
+  </section>
 
-  <p><strong>Kancelářské balíky</strong>. Symbolický „balík“ programů obvykle obsahuje textový procesor, tabulkový procesor, nástroj pro tvorbu prezentací, databázový systém, někdy i groupwarové nástroje (organizace času, schůzky) a grafické editory. Mezi nejznámější patří Microsoft Office, Apple iWork, OpenOffice a WPS Office.</p>
+  <section>
+    <h2>Základní skupiny aplikací</h2>
+    
+    <p><strong>Kancelářské balíky</strong>. Symbolický „balík“ programů obvykle obsahuje textový procesor, tabulkový procesor, nástroj pro tvorbu prezentací, databázový systém, někdy i groupwarové nástroje (organizace času, schůzky) a grafické editory. Mezi nejznámější patří Microsoft Office, Apple iWork, OpenOffice a WPS Office.</p>
 
-  <p><strong>Grafické aplikace</strong>. Slouží k tvorbě grafických dokumentů, skenování, práci s digitálními fotografiemi. Profesionální software např. Adobe Photoshop, Illustrator; opensource alternativy GIMP, Inkscape. Speciální oblasti tvoří animace, CAD nebo DTP programy.</p>
+    <p><strong>Grafické aplikace</strong>. Slouží k tvorbě grafických dokumentů, skenování, práci s digitálními fotografiemi. Profesionální software např. Adobe Photoshop, Illustrator; opensource alternativy GIMP, Inkscape. Speciální oblasti tvoří animace, CAD nebo DTP programy.</p>
 
-  <p><strong>Multimediální programy</strong>. Umožňují tvorbu a zpracování audiovizuálních dat, multimediálních prezentací, výukových programů a počítačových her.</p>
+    <p><strong>Multimediální programy</strong>. Umožňují tvorbu a zpracování audiovizuálních dat, multimediálních prezentací, výukových programů a počítačových her.</p>
 
-  <p><strong>Programy pro komunikaci v síti</strong>. Slouží pro správu sítí, vzdálený přístup k počítačům a souborům, vzdálený tisk, připojení intranetu k Internetu. Patří sem webové prohlížeče, e-mail klienti, groupware, IM a jiné.</p>
+    <p><strong>Programy pro komunikaci v síti</strong>. Slouží pro správu sítí, vzdálený přístup k počítačům a souborům, vzdálený tisk, připojení intranetu k Internetu. Patří sem webové prohlížeče, e-mail klienti, groupware, IM a jiné.</p>
 
-  <p><strong>Informační a databázové systémy</strong>. Komplexní software pro firmy nebo instituce. Základem jsou datové sklady (data warehouse) a ERP systémy, zahrnující moduly pro výrobu, logistiku, účetnictví atd. Lídři v oblasti IS: Oracle, Microsoft, IBM, SAP. Specializované aplikace podporují výrobní, ekonomické a další procesy.</p>
+    <p><strong>Informační a databázové systémy</strong>. Komplexní software pro firmy nebo instituce. Základem jsou datové sklady (data warehouse) a ERP systémy, zahrnující moduly pro výrobu, logistiku, účetnictví atd. Lídři v oblasti IS: Oracle, Microsoft, IBM, SAP. Specializované aplikace podporují výrobní, ekonomické a další procesy.</p>
 
-  <p><strong>Malware a antivirové programy</strong>. Malware poškozuje počítačový systém, antivirové programy (např. AVG, AVAST, ESET, Kaspersky) chrání před ním.</p>
+    <p><strong>Malware a antivirové programy</strong>. Malware poškozuje počítačový systém, antivirové programy (např. AVG, AVAST, ESET, Kaspersky) chrání před ním.</p>
 
-  <p><strong>Integrovaná vývojová prostředí (IDE)</strong>. Používají je programátoři pro vývoj aplikací. Obsahují editor kódu, ladicí nástroje, překladače a další nástroje pro efektivní práci.</p>
-<p><img src="https://i0.wp.com/www.jejumedia.com/wp-content/uploads/2017/11/Internet-Application.jpg?w=810&ssl=1" alt="Aplikace"></p>
+    <p><strong>Integrovaná vývojová prostředí (IDE)</strong>. Používají je programátoři pro vývoj aplikací. Obsahují editor kódu, ladicí nástroje, překladače a další nástroje pro efektivní práci.</p>
+  </section>
+
+  <section>
+    <p><img src="https://i0.wp.com/www.jejumedia.com/wp-content/uploads/2017/11/Internet-Application.jpg?w=810&ssl=1" alt="Aplikace"></p>
+  </section>
+
 </div>
+
 <div class="footer">
-        <hr>
-        <p>&copy; 2026, Ondřej Granzer, IT1</p>
-        <p><img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo"></p>
+  <p>&copy; 2026, Ondřej Granzer, IT1</p>
+  <img src="https://www.sspu-opava.cz/static/img/core-img/skola-logo.png" alt="Školní logo">
 </div>
 
 </body>
